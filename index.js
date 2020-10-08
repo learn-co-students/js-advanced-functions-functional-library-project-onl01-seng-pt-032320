@@ -108,14 +108,6 @@ const fi = (function() {
           let obj = {};
           array.map((e) => {
             obj[e] = callback(e)
-          })
-          let group = [...new Set(Object.values(obj))];
-          let results = []; 
-          for (const key in obj) {
-            if (!results.includes(obj[key])) {
-              results.push(obj[key]);
-              arrayFn.push(parseInt(key));
-            }
           // }
           // obj = {
           // 1: 1
@@ -125,7 +117,15 @@ const fi = (function() {
           // 6: 0
           // 9: 0
           //}
-        
+          })
+          let group = [...new Set(Object.values(obj))];
+          let results = []; 
+          for (const key in obj) {
+            // if the value is NOT in the results array, push it the the results array and push the KEY to the arrayFn array
+            if (!results.includes(obj[key])) {
+              results.push(obj[key]);
+              arrayFn.push(parseInt(key));
+            }
          } 
         return arrayFn; 
          
