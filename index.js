@@ -118,7 +118,7 @@ const fi = (function() {
           // 9: 0
           //}
           })
-          let group = [...new Set(Object.values(obj))];
+
           let results = []; 
           for (const key in obj) {
             // if the value is NOT in the results array, push it the the results array and push the KEY to the arrayFn array
@@ -132,9 +132,7 @@ const fi = (function() {
       } else {
         newArray = [...new Set(array)]
       }
-      console.log(newArray);
       return newArray;
-
     },
 
     keys: function(object) {
