@@ -94,21 +94,7 @@ const fi = (function() {
         return flattened;
     },
 
-    // uniq: function(array, isSorted = false, callback) { 
-    //   if (isSorted) {
-    //     for (let i = 1; i < array.length; i++) {
-    //       if (array[i-1] === array[i]) {
-    //         array.splice(array[i], 1);
-    //       } 
-    //     }
-    //     return array;
-    //   } else if (isSorted === false) {
-    //     array = array.sort((a,b) => a*1 - b*1);
-    //     fi.uniq(array, true);
-    //   }
-    //   return array;
-    
-//  
+ 
     uniq: function(array, isSorted = false, callback) { 
       let arrayFn = [];
       let newArray = [];
@@ -139,14 +125,8 @@ const fi = (function() {
           // 6: 0
           // 9: 0
           //}
-          
-          
-          // for (let i = 1; i < obj.values.length; i++) {
-          // // pass through callback, sort return values, then compare for duplicates 
-          // if (callback(array[i - 1]) !== callback(array[i])) {
-          //   arrayFn.push(array[i]);
+        
          } 
-         debugger
         return arrayFn; 
          
       } else {
