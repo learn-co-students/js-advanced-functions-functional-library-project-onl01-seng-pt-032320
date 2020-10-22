@@ -71,9 +71,9 @@ const fi = (function() {
       if (bool == true) { return array.flat(1) } else { return array.flat(3) }
     },
 
-    // uniq: function(array, bool) {
-    //   // SKIPPED ////////////////
-    // },
+    uniq: function(array, bool) {
+    //// SKIPPED ////////////////
+    },
 
     keys: function(theObject) {
       let anArray = [];
